@@ -77,11 +77,10 @@ func generateNextImage(img1 image.Image) *image.NRGBA {
 
 func generateImageFrames(inputFile string) []string {
 	img, err := imaging.Open(inputFile)
-	img = imaging.Resize(img, IMG_SIZE, IMG_SIZE, imaging.Lanczos)
 	if err != nil {
 		log.Fatalf("Open failed: %v", err)
 	}
-
+	img = imaging.Resize(img, IMG_SIZE, IMG_SIZE, imaging.Lanczos)
 	dest := fmt.Sprintf("static/%s%d.jpg", FRAME_IMG_NAME, 0)
 	saveImage(img, dest)
 	files := []string{dest}
@@ -99,10 +98,7 @@ func generateImageFrames(inputFile string) []string {
 func main() {
 	fmt.Printf("%s is transforming your image...", APP_NAME)
 
-	inputFile := os.Args[1]
-	if (inputFile == nil) {
-		inputFile = INPUT_IMG_NAME
-	}
+	inputFile := INPUT_IMG_NAME
 
 	fmt.Printf("%s is transforming your image: %s...", APP_NAME, inputFile)
 
