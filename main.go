@@ -52,10 +52,20 @@ func playGif(imageFrames []string) {
 	gif.EncodeAll(f, outGif)
 }
 
+func generateImageFrames(inputFile string) []string {
+	// TODO: create a list of frames from the input file path.
+	files := []string{"static/g1.gif", "static/g2.gif","static/g3.gif", "static/g2.gif"}
+	return files
+}
+
 func main() {
 	fmt.Printf("%s is transforming your image...", APP_NAME)
-	// Decode the JPEG data. If reading from file, create a reader with
-	files := []string{"static/g1.gif", "static/g2.gif","static/g3.gif", "static/g2.gif"}
+
+	inputFile := "static/input.png"
+
+	// Generate the gif frames from the input file.
+	files := generateImageFrames(inputFile)
+
 	playGif(files)
 	fmt.Print("done")
 }
