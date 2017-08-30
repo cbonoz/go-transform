@@ -1,5 +1,6 @@
 # Binaries for programs and plugins
 .idea
+static/frame*
 go-transform.iml
 *.exe
 *.dll
