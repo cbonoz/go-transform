@@ -6,16 +6,18 @@ Transforms your input image into a spiraling away gif.
 * Specify your input in the INPUT_FILE constant (ex: static/input.jpg)
 * go build
 * ./go-transform
-* See your output in out.gif
+* See your output in out.gif - resizes to 256x256 (configurable).
 
 
 ### Gif Example:
 
-<b>Input:</b>
+<b>Input:</b><br/>
 ![](https://github.com/cbonoz/go-transform/blob/master/static/input.jpg)
+<br/>
 
-<b>Output:</b>
+<b>Output:</b><br/>
 ![](https://github.com/cbonoz/go-transform/blob/master/out.gif)
+<br/>
 
 
 Packages:
