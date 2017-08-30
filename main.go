@@ -11,14 +11,13 @@ package main
   image
   bytes
   encoding
- */
-
+*/
 
 import (
 	"fmt"
 	"image"
-	"os"
 	"image/gif"
+	"os"
 )
 
 const APP_NAME = "go-transform"
@@ -54,14 +53,14 @@ func playGif(imageFrames []string) {
 
 func generateImageFrames(inputFile string) []string {
 	// TODO: create a list of frames from the input file path.
-	files := []string{"static/g1.gif", "static/g2.gif","static/g3.gif", "static/g2.gif"}
+	files := []string{"static/g1.gif", "static/g2.gif", "static/g3.gif", "static/g2.gif"}
 	return files
 }
 
 func main() {
 	fmt.Printf("%s is transforming your image...", APP_NAME)
 
-	inputFile := "static/input.png"
+	inputFile := os.Args[1]
 
 	// Generate the gif frames from the input file.
 	files := generateImageFrames(inputFile)
