@@ -1,5 +1,9 @@
 package main
 
+/*
+ * Go-transform takes your image and swirls it into a neat output gif.
+ * Remember to open your gif in chrome or other live gif viewer.
+ */
 
 /*
  * unicode
